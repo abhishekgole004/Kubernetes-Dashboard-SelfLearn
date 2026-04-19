@@ -11,25 +11,25 @@ ClusterRoleBinding: Binds the admin-user ServiceAccount to the cluster-admin rol
 ⚙️ Usage
 
 Apply the configuration:
-
+```bash
 kubectl apply -f dashboard-admin.yaml
-
+```
 Verify the ServiceAccount:
-
+```bash
 kubectl get serviceaccount admin-user -n kubernetes-dashboard
-
+```
 Verify the ClusterRoleBinding:
-
+```bash
 kubectl get clusterrolebinding admin-user-binding
-
+```
 🔑 Access Token
 
 To log in to the Kubernetes Dashboard with the admin user:
 
 Retrieve the token:
-
+```bash
 kubectl -n kubernetes-dashboard create token admin-user
-
+```
 Copy the token and paste it into the Dashboard login screen.
 
 ⚠️ Security Note
